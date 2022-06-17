@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator
 {
@@ -58,8 +48,8 @@ namespace Calculator
             {
                 labelResult.Content = selectedValue.ToString();
             }
-            else 
-            { 
+            else
+            {
                 labelResult.Content = $"{labelResult.Content.ToString()}{selectedValue.ToString()}";
             }
         }
@@ -82,7 +72,16 @@ namespace Calculator
             double currentNumber = Convert.ToDouble(labelResult.Content.ToString());
             double result = Calculations.Calculate(operation, lastNumber, currentNumber);
 
-            labelResult.Content = result.ToString();
+
+            if (operation == SelectedOperator.Division && currentNumber == 0)
+            {
+                MessageBox.Show("Division by 0 is not supported", "Unsupported Operation", MessageBoxButton.OK, MessageBoxImage.Error);
+                labelResult.Content = "0";
+            } else
+            {
+                labelResult.Content = result.ToString();
+            }
+
             isPreviousResult = true;
         }
 
@@ -98,7 +97,6 @@ namespace Calculator
             {
                 labelResult.Content = $"{labelResult.Content.ToString()}.";
             }
-
         }
 
         private void ResetResultConditional()
