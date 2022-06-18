@@ -77,7 +77,8 @@ namespace Calculator
             {
                 MessageBox.Show("Division by 0 is not supported", "Unsupported Operation", MessageBoxButton.OK, MessageBoxImage.Error);
                 labelResult.Content = "0";
-            } else
+            }
+            else
             {
                 labelResult.Content = result.ToString();
             }

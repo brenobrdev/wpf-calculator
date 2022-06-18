@@ -19,3 +19,4 @@ C:\git\Calculator\Calculator\obj\Debug\net6.0-windows\refint\Calculator.dll
 C:\git\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.pdb
 C:\git\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.genruntimeconfig.cache
 C:\git\Calculator\Calculator\obj\Debug\net6.0-windows\ref\Calculator.dll
+C:\git\Calculator\Calculator\obj\Debug\net6.0-windows\App.baml

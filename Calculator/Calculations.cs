@@ -11,23 +11,19 @@
             {
                 case SelectedOperator.Addition:
                     return num1 + num2;
-                    break;
 
                 case SelectedOperator.Subtraction:
                     return num1 - num2;
-                    break;
 
                 case SelectedOperator.Multiplication:
                     return num1 * num2;
-                    break;
 
                 case SelectedOperator.Division:
                     return num1 / num2;
-                    break;
 
                 default:
                     return num1 + num2;
-                    break;
+
             }
         }
     }
